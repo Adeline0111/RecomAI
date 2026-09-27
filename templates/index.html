@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RecomAI</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🎬 RecomAI</h1>
+
+        <p class="subtitle">
+            Find movies you'll love based on your preferences.
+        </p>
+
+        <div class="card">
+
+            <h2>Tell us what you like</h2>
+
+            <label for="genre">Genre</label>
+            <select id="genre">
+                <option value="Sci-Fi">Sci-Fi</option>
+                <option value="Romance">Romance</option>
+                <option value="Comedy">Comedy</option>
+                <option value="Drama">Drama</option>
+            </select>
+
+            <label for="language">Language</label>
+            <select id="language">
+                <option value="English">English</option>
+                <option value="Hindi">Hindi</option>
+            </select>
+
+            <label for="mood">Mood</label>
+            <select id="mood">
+                <option value="Thought-provoking">Thought-provoking</option>
+                <option value="Thrilling">Thrilling</option>
+                <option value="Inspirational">Inspirational</option>
+                <option value="Emotional">Emotional</option>
+                <option value="Feel-Good">Feel-Good</option>
+            </select>
+
+            <label for="type">Type</label>
+            <select id="type">
+                <option value="Movie">Movie</option>
+            </select>
+
+            <button id="recommendButton">
+                ✨ Get Recommendations
+            </button>
+
+        </div>
+
+        <div id="results"></div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
